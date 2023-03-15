@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mensajitos</title>
+  <script>
+    var i = 0;
+    var mensajes = ["Hola, como estas?", "Te queria decir que aunque no te vi hoy ", "Te veias preciosa", "te quiero <3", "Por cierto", "que bonita sonrisa tienes", "Cuidate"];
+    var tiempo = 2000; // Cambia este valor para ajustar el tiempo de cambio de diapositiva (en milisegundos)
+
+    function cambiarMensaje() {
+      document.getElementById("mensaje").innerHTML = mensajes[i];
+      i++;
+      if (i >= mensajes.length) {
+        i = 0;
+      }
+      setTimeout(cambiarMensaje, tiempo);
+    }
+  </script>
+</head>
+<body onload="cambiarMensaje()">
+  <h1>Mensajito para ti.</h1>
+  <p id="mensaje"></p>
+</body>
+</html>
